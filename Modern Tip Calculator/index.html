@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator ➕ | Muhammad Nouman Ejaz</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <section class="Heading-section">
+        <h1 class="heading">➕ Tip Calculator ➕</h1>
+      </section>
+      <section class="error hidden">
+        <span class="errorPrint">Please Enter both Tip% and Bill Amount</span>
+      </section>
+      <section class="error2 hidden">
+        <span class="errorPrint">Enter valid amounts</span>
+      </section>
+      <section class="configbtn hidden">
+        <button class="btn tipbtn">Configure Tip %</button>
+        <button class="btn namebtn">Configure Name</button>
+      </section>
+      <section class="form-section">
+        <form class="form">
+          <label for="name" class="form__label name-label">Enter Your Name:</label>
+          <input type="text" class="form__input"  id="name" maxlength="30"/>
+          <label for="Tip" class="form__label tip-label">Enter Your Tip %:*</label>
+          <input type="number" class="form__input" id="tip%" />
+          <label for="billCost" class="form__label">Enter Your Bill Cost:*</label>
+          <input type="number" class="form__input" id="bill" />
+          <a href="#" class="btn submitbtn">Calculate</a>
+        </form>
+      </section>
+      <section class="data hidden">
+        <table class="data__tabel">
+          <thead class="data__head">
+            <th colspan="4" class="data__head"> <span class="consolename">Nouman</span> your Final bill is:</th>
+          </thead>
+          <tbody class="data__body">
+            <tr class="head-row">
+              <td class="data__item">Tip %</td>
+              <td class="data__item">Total bill</td>
+              <td class="data__item">Tip amount</td>
+              <td class="data__item">Total to Pay</td>
+            </tr>
+            <tr>
+              <td class="data__item consoletip">Tip %</td>
+              <td class="data__item consolebill">Total bill</td>
+              <td class="data__item consoletipamount">Tip amount</td>
+              <td class="data__item consoletotal">Total to Pay</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
