@@ -90,8 +90,8 @@ nav {
   gap: 2rem;
 
   /* NOTE This creates the fade in/out anumation */
-  opacity: 1;
-  transition: all 1s;
+  opacity: 0;
+  transition: all .5s;
 }
 
 .balance {
@@ -295,6 +295,29 @@ h2 {
   font-weight: 600;
 }
 
+.hidden{
+  display: none;
+}
+
+.aboutmessage{
+  text-align: center;
+  padding: 10rem 5rem 0;
+  z-index: 5;
+}
+.aboutmessage__heading{
+  font-size: 2.5rem;
+}
+.aboutmessage__body{
+  margin-top: 3rem;
+  font-size: 1.5rem;
+}
+code{
+  background-color: #39b385;
+  color: #fff;
+  padding: .3rem .5rem;
+}
+
+
 
 /* responsive for the mobiles only 
 because this is not where am working on my designing
@@ -317,5 +340,13 @@ it's where i practiced javascript logics */
   .app {
     display: flex;
     flex-direction: column;
+  }
+  .summary{
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+  .logout-timer{
+    margin-bottom: 2rem;
+    text-align: center;
   }
 }
