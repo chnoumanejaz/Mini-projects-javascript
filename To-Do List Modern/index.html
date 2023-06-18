@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List by Nouman Ejaz</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="app">
+        <div class="title">
+          Your To-Do List
+          <svg class="svg">
+            <use xlink:href="img/sprite.svg#icon-file-text"></use>
+          </svg>
+        </div>
+        <div class="app__heading">Add your Tasks 😉</div>
+        <div class="app__input">
+          <input type="text" placeholder="Enter the Task" class="input field" />
+          <select name="select" class="field selection">
+            <option value="select Category" disabled>select Category</option>
+            <option value="Important" style="font-weight: bold">
+              Important
+            </option>
+            <option value="Work">Workload</option>
+            <option value="School">School</option>
+            <option value="Home">Home</option>
+            <option value="Other">Other</option>
+          </select>
+          <button class="btn field">
+            Add Task
+            <svg class="svg-plus">
+              <use xlink:href="img/sprite.svg#icon-plus"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="data">
+          <div class="Important">
+            <h3 class="hidden"></h3>
+            <ul class="list list-imp"></ul>
+          </div>
+          <div class="Work">
+            <h3 class="hidden"></h3>
+            <ul class="list list-work"></ul>
+          </div>
+          <div class="School">
+            <h3 class="hidden"></h3>
+            <ul class="list list-school"></ul>
+          </div>
+          <div class="Home">
+            <h3 class="hidden"></h3>
+            <ul class="list list-home"></ul>
+          </div>
+
+          <div class="Other">
+            <h3 class="hidden"></h3>
+            <ul class="list list-other"></ul>
+          </div>
+        </div>
+        <!-- Buttons to change the colors of themes -->
+        <span class="dot2 blue-btn" onclick="changeColorBlue()"> </span>
+        <span class="dot2 green-btn" onclick="changeColorGreen()"></span>
+        <span class="dot2 red-btn" onclick="changeColorRed()"></span>
+        <span class="dot2 yellow-btn" onclick="changeColorYellow()"></span>
+        <div class="copyright"></div>
+      </div>
+    </main>
+
+    <div class="error-sec">
+      <div class="error-msg"></div>
+    </div>
+    <div class="success-sec">
+      <div class="success-msg"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
