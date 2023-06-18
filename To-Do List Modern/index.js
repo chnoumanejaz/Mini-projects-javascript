@@ -92,6 +92,7 @@ btn.addEventListener('click', function () {
         work = true;
       }
       listWork.insertAdjacentHTML('afterbegin', html(input.value));
+      saveData();
       rendersuccess(`(${input.value}) Task Added in (Workload) Section `);
     } else if (selection.value === 'School') {
       if (school === false) {
@@ -99,6 +100,7 @@ btn.addEventListener('click', function () {
         school = true;
       }
       listSchool.insertAdjacentHTML('afterbegin', html(input.value));
+      saveData();
       rendersuccess(
         `(${input.value}) Task Added in (${selection.value}) Section `
       );
@@ -108,6 +110,7 @@ btn.addEventListener('click', function () {
         home = true;
       }
       listHome.insertAdjacentHTML('afterbegin', html(input.value));
+      saveData();
       rendersuccess(
         `(${input.value}) Task Added  in (${selection.value}) Section `
       );
@@ -120,6 +123,7 @@ btn.addEventListener('click', function () {
         important = true;
       }
       listImportant.insertAdjacentHTML('afterbegin', html(input.value));
+      saveData();
       rendersuccess(
         `(${input.value}) Task Added  in (${selection.value}) Section `
       );
@@ -129,6 +133,7 @@ btn.addEventListener('click', function () {
         other = true;
       }
       listOther.insertAdjacentHTML('afterbegin', html(input.value));
+      saveData();
       rendersuccess(
         `(${input.value}) Task Added  in (${selection.value}) Section `
       );
@@ -146,11 +151,13 @@ data.addEventListener('click', function (e) {
     listItem.style.color = 'var(--DARK-COLOR)';
     dot.style.border = '6px solid var(--DARK-COLOR)';
     rendersuccess(` (${listItem.textContent.trim()}) Task Completed `);
+    saveData();
   } else {
     listItem.style.textDecoration = 'none';
     listItem.style.color = '#fff';
     dot.style.border = '1px solid';
     rendersuccess(`(${listItem.textContent.trim()}) Task Recovered `);
+    saveData();
   }
 });
 
@@ -163,8 +170,21 @@ data.addEventListener('click', function (e) {
     data.style.display = 'none';
     closeBtn.style.display = 'none';
     rendersuccess('Task Deleted  ');
+    saveData();
   });
 });
+
+// save data to Local Storage
+function saveData() {
+  return localStorage.setItem('list', data.innerHTML);
+}
+
+// getting the data
+function showData() {
+  return (data.innerHTML = localStorage.getItem('list'));
+}
+showData();
+
 
 // Changing Theme of app
 function changeColorBlue() {
